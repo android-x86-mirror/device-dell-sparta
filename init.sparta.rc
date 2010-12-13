@@ -1,0 +1,9 @@
+onboot
+	mkdir /data/sdcard
+	chmod 777 /data/sdcard
+	cp /system/etc/asound.state /data
+
+service eGestured /system/bin/eGestured
+	user root
+	group root
+	oneshot

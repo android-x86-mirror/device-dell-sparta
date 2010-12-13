@@ -1,0 +1,27 @@
+
+sparta_info()
+{
+	# common for all models
+        SNDDEV=snd-hda-intel
+        CAMDEV=uvcvideo
+	board=`cat /sys/class/dmi/id/product_name`
+	case "$board" in
+		*Inspiron*1090)
+			BOARD_USES_TSLIB=true
+			;;
+		*)
+			;;
+	esac
+
+	return 1 # auto_detect
+}
+
+detect_hardware()
+{
+	case "`cat /sys/class/dmi/id/uevent`" in
+		*Inspiron*1090)
+			;;
+		*)
+			;;
+	esac
+}
