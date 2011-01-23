@@ -2,8 +2,6 @@
 sparta_info()
 {
 	# common for all models
-        SNDDEV=snd-hda-intel
-        CAMDEV=uvcvideo
 	board=`cat /sys/class/dmi/id/product_name`
 	case "$board" in
 		*Inspiron*1090)
