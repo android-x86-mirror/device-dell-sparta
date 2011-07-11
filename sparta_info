@@ -24,4 +24,7 @@ detect_hardware()
 		*)
 			;;
 	esac
+
+	EXTMOD="$EXTMOD hid-multitouch"
+	return 1 # auto_detect
 }
